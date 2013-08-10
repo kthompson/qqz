@@ -5,3 +5,6 @@
 *.ipch
 *.opensdf
 USER*/
+BinTemp
+Editor/EditorEventLog.xml
+Editor/EditorLayout.xml

@@ -834,6 +834,7 @@
     <ClCompile Include="Environment\Snow.cpp">
       <Filter>Game Files\Environment</Filter>
     </ClCompile>
+    <ClCompile Include="Network\RestClient.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameStartup.h">
@@ -1526,6 +1527,7 @@
     <ClInclude Include="Environment\Snow.h">
       <Filter>Game Files\Environment</Filter>
     </ClInclude>
+    <ClInclude Include="Network\RestClient.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GameActions.actions">
