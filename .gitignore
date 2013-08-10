@@ -1,1 +1,7 @@
 *.pak
+*.log
+*.suo
+*.sdf
+*.ipch
+*.opensdf
+USER*/
