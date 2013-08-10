@@ -603,6 +603,11 @@ struct SCVars
 	int		  g_animatorDebug;
 
 	int	g_useOnlineLobbyService;
+	
+	ICVar*  sv_authServer_url;
+	ICVar*  sv_authServer_username;
+	ICVar*  sv_authServer_password;
+
 
 	enum EHitDeathReactionsLogReactionAnimsType
 	{

@@ -818,6 +818,11 @@ void SCVars::InitCVars(IConsole *pConsole)
 	REGISTER_CVAR(g_forceItemRespawnTimer, 0.f, 0, "Override the amount of time it takes to respawn an item (0=disable override)");
 	REGISTER_CVAR(g_defaultItemRespawnTimer, 5.f, 0, "Default amount of time to respawn an item - used if the actual timer length is lost in a host migration");
 
+
+	sv_authServer_url = REGISTER_STRING("sv_authServer_url","http://localhost:3000/",VF_READONLY, "Authentication Server Url");
+	sv_authServer_username = REGISTER_STRING("sv_authServer_username","admin", VF_DUMPTODISK, "Authentication Server Username");
+	sv_authServer_password = REGISTER_STRING("sv_authServer_password","admin", VF_DUMPTODISK, "Authentication Server Password");
+  
   NetInputChainInitCVars();
 
 	InitAIPerceptionCVars(pConsole);
@@ -1155,6 +1160,10 @@ void SCVars::ReleaseCVars()
 	pConsole->UnregisterVariable("g_hitDeathReactions_disableRagdoll", true);
 	pConsole->UnregisterVariable("g_hitDeathReactions_disableHitAnimatedCollisions", true);
 	pConsole->UnregisterVariable("g_animatorDebug", true);
+
+	pConsole->UnregisterVariable("sv_authServer_url", true);
+	pConsole->UnregisterVariable("sv_authServer_username", true);
+	pConsole->UnregisterVariable("sv_authServer_password", true);
 
 	ReleaseAIPerceptionCVars(pConsole);
 }
